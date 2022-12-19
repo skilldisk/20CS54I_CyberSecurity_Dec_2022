@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Web Security - Skill Disk</title>
+
+    <meta name="description" content="Web Security : 20CS54I Cyber Security">
+    <meta name="author" content="Arun kumar N">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+    <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- highlight Theme -->
+    <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/Stackoverflow-Dark.min.css">
+    <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+    <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
+
+    <!-- Revealjs Theme -->
+    <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/night.css" id="theme">
+
+    <link rel="stylesheet" href="libs/styles/tasklist.css">
+    <link rel="stylesheet" href="libs/styles/iota.css">
+    <link rel="stylesheet" href="libs/styles/layout.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="skill_style.css">
+
+
+</head>
+
+<body>
+
+
+    <div id="logo" style="position: fixed; top: 20px; left: 20px; z-index: 1; height:3rem;">
+        <img src="./image/logo.png" style="height:100%" />
+    </div>
+
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+
+                <h1>Web Security</h1>
+
+            </section>
+
+            <section style="text-align: left;">
+
+                <!-- .slide: style="text-align: left;" -->
+                <h2>Contents</h2>
+                <ul>
+                    <li>Website</li>
+                    <li>HTTP &amp; HTTPS</li>
+                    <li>Is HTTPS Secured ?</li>
+                    <li>Authentication.</li>
+                    <li>Phishing.</li>
+                    <li>Aadhaar</li>
+                    <li>OWASP top 10</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <section style="text-align: left;">
+                    <!-- .slide: style="text-align: left;" -->
+                    <h1>Website</h1>
+                    <aside class="notes"> this is note</aside>
+
+                </section>
+
+                <section>
+                    <ul>
+                        <li>HTML.</li>
+                        <li>CSS.</li>
+                        <li>JavaScript.</li>
+                    </ul>
+
+                </section>
+
+                <section style="text-align: left;">
+                    <!-- .slide: style="text-align: left;" -->
+                    <h2>Web Version.</h2>
+                    <ul>
+                        <li class="fragment fade-left">Web 1.0</li>
+                        <li class="fragment fade-left">Web 2.0</li>
+                        <li class="fragment fade-left">Web 3.0</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2>Website in the Browser.</h2>
+
+                </section>
+
+                <section>
+                    <p><img src="./image/draw/web_server_1.drawio.svg" alt="server"></p>
+
+                </section>
+
+                <section>
+                    <p><img src="./image/draw/web_server_2.drawio.svg" alt="server"></p>
+
+                </section>
+
+                <section>
+                    <p><img src="./image/draw/web_server_3.drawio.svg" alt="server"></p>
+
+                </section>
+
+                <section>
+                    <ul>
+                        <li class="logo-text">URL
+                            <ul>
+                                <li class="fragment fade-down green-text">Uniform Resource Locators</li>
+                            </ul>
+                        </li>
+                        <li class="fragment fade-left logo-text">IP Address
+                            <ul>
+                                <li class="fragment fade-down green-text">Internet Protocol address</li>
+                            </ul>
+                        </li>
+                        <li class="fragment fade-left logo-text">DNS
+                            <ul>
+                                <li class="fragment fade-down green-text">Domain Name System</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <p><img src="./image/draw/web_server_3.drawio.svg" alt="server"></p>
+
+                </section>
+
+                <section>
+                    <p><img src="./image/draw/web_server_4.drawio.svg" alt="server"></p>
+
+                </section>
+
+                <section style="text-align: left;">
+                    <!-- .slide: style="text-align: left;" -->
+                    <h2>Request</h2>
+                    <ul>
+                        <li class="fragment fade-left">GET</li>
+                        <li class="fragment fade-left">POST</li>
+                    </ul>
+
+                </section>
+
+                <section style="text-align: left;">
+                    <!-- .slide: style="text-align: left;" -->
+                    <h2>GET</h2>
+                    <p>Form data will be sent in the URL.</p>
+
+                </section>
+
+                <section style="text-align: left;">
+                    <!-- .slide: style="text-align: left;" -->
+                    <h2>POST</h2>
+                    <p>Form data will be sent in request header.</p>
+
+                </section>
+
+                <section>
+                    <p>POST request data is secure</p>
+                    <h1>?</h1>
+                    <h2 class="fragment fade-in red-text"><strong>NO</strong></h2>
+                    <aside class="notes"> we will not be able to view it on the url, but is visible on the header
+                        content.</aside>
+
+                </section>
+
+            </section>
+
+
+            <section>
+                <section>
+                    <h2>Secure the information with HTTPS.</h2>
+
+                </section>
+
+                <section>
+                    <ul>
+                        <li class="logo-text">HTTP
+                            <ul>
+                                <li class="fragment fade-down green-text">Hypertext Transfer Protocol</li>
+                            </ul>
+                        </li>
+                        <li class="fragment fade-left logo-text">SSL
+                            <ul>
+                                <li class="fragment fade-down green-text">Secure Sockets Layer</li>
+                                <li class="fragment fade-down white-text">Adding SSL Certificate in Server.</li>
+                            </ul>
+                        </li>
+                        <li class="fragment fade-left logo-text">HTTPS
+                            <ul>
+                                <li class="fragment fade-down green-text">Hypertext Transfer Protocol Secure</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+
+
+            </section>
+
+            <section>
+                <section>
+                    <h1>Is HTTPS Secured ?</h1>
+
+                </section>
+
+                <section>
+                    <h2>DNS</h2>
+
+                </section>
+
+                <section>
+
+                </section>
+
+
+            </section>
+
+            <section>
+                <section>
+                    <p><img src="./image/auth.png" alt="Authentication"></p>
+                    <h1>Authentication.</h1>
+
+                </section>
+
+                <section>
+                    <h2 class="logo-text">DEMO TIME</h2>
+
+                </section>
+
+
+            </section>
+
+            <section>
+                <section>
+                    <p style="height:300px"><img src="./image/draw/aadhaar.drawio.png" alt="aadhaar"></p>
+                    <h1>Aadhaar</h1>
+
+                </section>
+
+                <section>
+                    <h2>Frustration for Password in Aadhaar PDF copy.</h2>
+                    <ul>
+                        <li class="fragment fade-left logo-text">VID
+                            <ul>
+                                <li class="fragment fade-down green-text">Virtual Identification</li>
+                                <li class="fragment fade-down white-text">Use VID instead of Aadhaar Number</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <aside class="notes"> Some times we feel frustrated, Why they have given password for pdf copy of
+                        Aadhaar copy.</aside>
+
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <p style="filter:invert(100%);"><img src="./image/phishing.png" alt="phishing"></p>
+                    <h1>Phishing</h1>
+
+                </section>
+
+                <section>
+                    <video autoplay controls width="920">
+                        <source src="./image/5g_scam.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                </section>
+
+
+            </section>
+
+            <section>
+                <section>
+                    <h1>OWASP top 10</h1>
+
+                </section>
+
+                <section>
+                    <ul>
+                        <li class="logo-text">OWASP
+                            <ul>
+                                <li class="fragment fade-down green-text">Open Web Application Security Project</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <p><img src="./image/owasp_2017_2021.png" alt="owasp survey"></p>
+
+                </section>
+
+            </section>
+
+            <section>
+
+                <h1 class="logo-text"> <a href="./part_2.html">Part-2</a></h1>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <div class="line top"></div>
+    <div class="line bottom"></div>
+    <div class="line left"></div>
+    <div class="line right"></div>
+
+    <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+    <script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+
+    <script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+    <script>
+        const printPlugins = [
+            RevealNotes,
+            RevealHighlight,
+            RevealMath.MathJax3,
+            RevealAnimate,
+            RevealChalkboard,
+            RevealEmbedTweet,
+            RevealChart,
+        ];
+
+        const plugins = [...printPlugins,
+            RevealZoom,
+            RevealSearch,
+            RevealMarkdown,
+
+            RevealFullscreen,
+            RevealAnything,
+            //RevealAudioSlideshow,
+            //RevealAudioRecorder,
+
+            // poll
+            // question
+            // seminar
+            Verticator
+        ]
+
+
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
+        Reveal.initialize({
+            controls: true,
+            controlsTutorial: true,
+            controlsLayout: 'bottom-right',
+            controlsBackArrows: 'faded',
+            progress: true,
+            slideNumber: false,
+            //#showSlideNumber "all" "print" "speaker"
+            hash: true, //# hash: false,
+            //# respondToHashChanges: true,
+            //# history: false,
+            keyboard: true,
+            //#keyboardCondition: null,
+            overview: true,
+            center: true,
+            touch: true,
+            loop: false,
+            rtl: false,
+            //#navigationMode: 'default', linear grid
+            shuffle: false,
+            fragments: true,
+            fragmentInURL: false,
+            embedded: false,
+            help: true,
+            //#pause: true
+            showNotes: false,
+            autoPlayMedia: false, // TODO fix this to a nullable value
+            //#preloadIframes: null. true false
+            //#autoAnimate: true
+            //#autoAnimateMatcher: null,
+            //#autoAnimateEasing: 'ease',
+            //autoAnimateDuration: 1.0,
+            //#autoAnimateUnmatched: true
+            //#autoAnimateStyles: []
+            autoSlide: 0, // TODO fix this to a falseable value
+            autoSlideStoppable: true,
+            autoSlideMethod: '0',
+            defaultTiming: 120,
+            mouseWheel: true,
+            //#previewLinks: false
+            //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+            //#postMessageEvents: false,
+            //#focusBodyOnPageVisibilityChange: true,
+            transition: 'fade',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+            //#pdfSeparateFragments: true,
+            //#pdfPageHeightOffset: -1,
+            viewDistance: 3,
+            //#mobileViewDistance: 2,
+            display: 'block',
+            //#hideInactiveCursor: true,
+            //#hideCursorTime: 5000
+
+            // Parallax Background
+            parallaxBackgroundImage: '',
+            parallaxBackgroundSize: '',
+            parallaxBackgroundHorizontal: 0,
+            parallaxBackgroundVertical: 0,
+
+            //Presentation Size
+            width: 960,
+            height: 700,
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2,
+            disableLayout: false,
+
+            audio: {
+                prefix: 'audio/', // audio files are stored in the "audio" folder
+                suffix: '.ogg', // audio files have the ".ogg" ending
+                textToSpeechURL: null, // the URL to the text to speech converter
+                defaultNotes: false, // use slide notes as default for the text to speech converter
+                defaultText: false, // use slide text as default for the text to speech converter
+                advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+                autoplay: false, // automatically start slideshow
+                defaultDuration: 5, // default duration in seconds if no audio is available
+                defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+                playerOpacity: 0.05, // opacity value of audio player if unfocused
+                playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+                startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+            },
+
+            chalkboard: { // font-awesome.min.css must be available
+                //src: "chalkboard/chalkboard.json",
+                storage: "chalkboard-demo",
+            },
+
+            customcontrols: {
+                controls: [
+                    {
+                        id: 'toggle-overview',
+                        title: 'Toggle overview (O)',
+                        icon: '<i class="fa fa-th"></i>',
+                        action: 'Reveal.toggleOverview();'
+                    }
+                    ,
+                    {
+                        icon: '<i class="fa fa-pen-square"></i>',
+                        title: 'Toggle chalkboard (B)',
+                        action: 'RevealChalkboard.toggleChalkboard();'
+                    },
+                    {
+                        icon: '<i class="fa fa-pen"></i>',
+                        title: 'Toggle notes canvas (C)',
+                        action: 'RevealChalkboard.toggleNotesCanvas();'
+                    }
+
+                ]
+            },
+            chart: {
+                defaults: {
+                    color: 'lightgray', // color of labels
+                    scale: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 },
+                        grid: { color: "lightgray" }, // color of grid lines
+                    },
+                },
+                line: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"], "borderDash": [[5, 10], [0, 0]] },
+                bar: { backgroundColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+                pie: { backgroundColor: [["rgba(0,0,0,.8)", "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"]] },
+                radar: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+            },
+            math: {
+                mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                config: 'TeX-AMS_HTML-full',
+                // pass other options into `MathJax.Hub.Config()`
+                TeX: { Macros: { RR: "{\\bf R}" } }
+            },
+            anything: [
+                {
+                    className: "plot",
+                    defaults: { width: 500, height: 500, grid: true },
+                    initialize: (function (container, options) { options.target = "#" + container.id; functionPlot(options) })
+                },
+                {
+                    className: "chart",
+                    initialize: (function (container, options) { container.chart = new Chart(container.getContext("2d"), options); })
+                },
+                {
+                    className: "anything",
+                    initialize: (function (container, options) { if (options && options.initialize) { options.initialize(container) } })
+                },
+            ],
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins)
+        });
+
+
+
+        // Change chalkboard theme : 
+        function changeTheme(input) {
+            var config = {};
+            config.theme = input.value;
+            Reveal.getPlugin("RevealChalkboard").configure(config);
+            input.blur();
+        }
+
+        // // Handle the message inside the webview
+        // window.addEventListener('message', event => {
+
+        //     const message = event.data; // The JSON data our extension sent
+
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
+
+        if (window.location.search.match(/print-pdf-now/gi)) {
+            setTimeout(() => {
+                window.print();
+            }, 2500);
+
+        }
+    </script>
+
+</body>
+
+</html>

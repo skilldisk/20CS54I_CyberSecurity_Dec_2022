@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cyber Security - Skill Disk</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+    <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- highlight Theme -->
+    <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/Stackoverflow-Dark.min.css">
+    <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+    <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
+
+    <!-- Revealjs Theme -->
+    <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/night.css" id="theme">
+    <link rel="stylesheet" href="libs/styles/tasklist.css">
+    <link rel="stylesheet" href="libs/styles/iota.css">
+    <link rel="stylesheet" href="libs/styles/layout.css">
+
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="skill_style.css">
+
+</head>
+
+<body>
+
+
+    <div id="logo" style="position: fixed; top: 20px; left: 20px; z-index: 1; height:3rem;">
+        <img src="./image/logo.png" style="height:100%" />
+    </div>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+
+                <h1 class="r-fit-text">Cyber Security</h1>
+
+            </section>
+
+            <section style="text-align: left;">
+
+                <!-- .slide: style="text-align: left;" -->
+                <h2>Contents</h2>
+                <ul>
+                    <li>OWASP TOP 10.</li>
+                    <li>Scanning Tools.</li>
+                    <li>OWASP ZAP.</li>
+                    <li>Password.</li>
+                    <li>Case Studies.</li>
+                    <li>Project Ideas.</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <section>
+                    <h1 class="r-fit-text">OWASP</h1>
+                    <p>Open Web Application Security Project</p>
+                    <aside class="notes"> OWASP Community</aside>
+
+                </section>
+
+                <section>
+                    <p><img src="./image/owasp_2017_2021.png" alt="owasp top 10"></p>
+
+                </section>
+
+                <section>
+                    <h2>TOP 10</h2>
+                    <ul>
+                        <li>Broken Access Control</li>
+                        <li class="fragment highlight-red">Cryptographic Failures</li>
+                        <li>Injection</li>
+                        <li class="fragment highlight-red">Insecure Design</li>
+                        <li>Security Misconfiguration</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2>TOP 10</h2>
+                    <ul>
+                        <li>Vulnerable and Outdated Components</li>
+                        <li>Identification and Authentication Failures</li>
+                        <li>Software and Data Integrity Failures</li>
+                        <li>Security Logging and Monitoring Failures</li>
+                        <li class="fragment highlight-red">Server-Side Request Forgery</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>OWASP API Top 10</li>
+                        <li>OWASP IoT Top 10</li>
+                        <li>OWASP Mobile Top 10</li>
+                        <li>OWASP Testing Guide</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h1>OWASP API Top 10</h1>
+                    <p><a href="https://owasp.org/www-project-api-security/" target="_blank" data-title="know more"><img
+                                src="./image/link-sd.svg" alt="link"></a></p>
+
+                </section>
+
+                <section>
+                    <h2>API Security Top 10 2019</h2>
+                    <ul>
+                        <li class="fragment highlight-red">Broken Object Level Authorization</li>
+                        <li>Broken User Authentication</li>
+                        <li>Excessive Data Exposure</li>
+                        <li class="fragment highlight-red">Lack of Resources &amp; Rate Limiting</li>
+                        <li class="fragment highlight-red">Broken Function Level Authorization</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2>API Security Top 10 2019</h2>
+                    <ul>
+                        <li>Mass Assignment</li>
+                        <li>Security Misconfiguration</li>
+                        <li>Injection</li>
+                        <li>Improper Assets Management</li>
+                        <li class="fragment highlight-red">Insufficient Logging &amp; Monitoring</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2 class="fragment highlight-red r-fit-text">OWASP IOT Top 10</h2>
+                    <p><a href="https://owasp.org/www-project-internet-of-things/" target="_blank"
+                            data-title="know more"><img src="./image/link-sd.svg" alt="link"></a></p>
+
+                </section>
+
+                <section>
+                    <h2 class="r-fit-text">OWASP Mobile Top 10</h2>
+                    <p><a href="https://owasp.org/www-project-mobile-top-10/" target="_blank"
+                            data-title="know more"><img src="./image/link-sd.svg" alt="link"></a></p>
+
+                </section>
+
+                <section>
+                    <h2 class="r-fit-text">OWASP Testing Guide</h2>
+                    <p><a href="https://owasp.org/www-project-web-security-testing-guide/v42/" target="_blank"
+                            data-title="know more"><img src="./image/link-sd.svg" alt="link"></a></p>
+
+                </section>
+
+                <section>
+                    <h2 class="r-fit-text">TOP 25 Most Dangerous Software Errors</h2>
+                    <p><a href="https://www.sans.org/top25-software-errors/" target="_blank" data-title="know more"><img
+                                src="./image/link-sd.svg" alt="link"></a></p>
+
+                </section>
+
+            </section>
+
+            <section>
+                <section style="text-align: left;">
+
+                    <h1 class="r-fit-text">Scanning Tools.</h1>
+
+                </section>
+
+                <section style="text-align: left;">
+                    <!-- .slide: style="text-align: left;" -->
+                    <h2>Free Open Source.<img src="./image/rupee_free.svg" alt="free" style="margin:0px;height:50px;">
+                    </h2>
+                    <ul>
+                        <li>OWASP ZAP (Java)</li>
+                        <li>W3af (Python)</li>
+                        <li>Arachni (Ruby)</li>
+                        <li>Iron Wasp</li>
+                        <li>Grabber (Python)</li>
+                        <li>Retina CS Community</li>
+                    </ul>
+
+                </section>
+
+                <section style="text-align: left;">
+                    <!-- .slide: style="text-align: left;" -->
+                    <h2 class="logo-text">Commercial ₹</h2>
+                    <ul>
+                        <li>Acunetix</li>
+                        <li>Invicti (Netsparker)</li>
+                        <li>IBM AppScan</li>
+                        <li>WebInspect</li>
+                        <li>Veracode</li>
+                        <li>Qualys WAS</li>
+                        <li>HCL AppScan</li>
+                        <li>Burp Suite</li>
+                    </ul>
+
+                </section>
+
+            </section>
+
+
+            <section>
+                <section>
+                    <h2 class="r-fit-text">OWASP ZAP</h2>
+                    <p><a href="https://github.com/zaproxy/zaproxy" target="_blank"
+                            data-title="source code in github"><img src="./image/icons8-github.svg" alt="Github"></a>
+                        <a href="https://www.zaproxy.org/" target="_blank" data-title="website"><img
+                                src="./image/link-sd.svg" alt="link"></a>
+                        <a href="https://www.zaproxy.org/download/" target="_blank" data-title="download"><img
+                                src="./image/download.svg" alt="download"></a>
+                    </p>
+
+                </section>
+
+                <section>
+                    <h2>Setting Up Vulnerable Target Web Application</h2>
+
+                </section>
+
+                <section>
+                    <ul>
+                        <li>QWASP Juice Shop <a target="_blank" href="https://juice-shop.herokuapp.com/#/"><img
+                                    src="./image/link-sd.svg" alt="link"></a></li>
+                        <li>DAMN VULNERABLE WEB APPLICATION <a target="_blank"
+                                href="https://github.com/digininja/DVWA"><img src="./image/icons8-github.svg"
+                                    alt="github"></a></li>
+                        <li>DVWS-NODE <a target="_blank" href="https://github.com/snoopysecurity/dvws-node"><img
+                                    src="./image/icons8-github.svg" alt="github"></a></li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2 class="logo-text">DEMO TIME</h2>
+
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h1 class="r-fit-text">Password</h1>
+                    <p><img src="./image/key.svg" alt="key" style="height:20vh;"></p>
+
+                </section>
+
+                <section>
+                    <h2>Password Hashing Algorithm</h2>
+                    <ul>
+                        <li>Password-Based Key Derivation Function 2 (PBKDF2)</li>
+                        <li>scrypt</li>
+                        <li>Bcrypt</li>
+                        <li>Balloon</li>
+                        <li class="fragment highlight-green">Argon2</li>
+                    </ul>
+
+                </section>
+
+            </section>
+
+
+            <section>
+                <section>
+                    <h1 class="r-fit-text">Case Studies</h1>
+
+                </section>
+
+                <section>
+                    <h2>Infosys AWS Key Leaked</h2>
+                    <p><a target="_blank"
+                            href="https://tomforb.es/infosys-leaked-fulladminaccess-aws-keys-on-pypi-for-over-a-year/?s=08"><img
+                                src="./image/link-sd.svg" alt="link"></a></p>
+
+                </section>
+
+                <section>
+                    <h2>Aadhar</h2>
+                    <p><a target="_blank"
+                            href="https://blog.mozilla.org/netpolicy/2019/03/05/aaadhaar-ordinance-but-still-no-movement-on-data-protection-law/"><img
+                                src="./image/link-sd.svg" alt="link"></a></p>
+
+                </section>
+
+                <section>
+                    <h2>Mozilla DNS over HTTPS (DoH) and Trusted Recursive Resolver (TRR)</h2>
+                    <p><a target="_blank"
+                            href="https://blog.mozilla.org/netpolicy/2021/06/10/working-in-the-open-enhancing-privacy-and-security-in-the-dns/"><img
+                                src="./image/link-sd.svg" alt="link"></a></p>
+                    <p><a target="_blank" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9775718">IEEE
+                            Access</a></p>
+
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h1 class="logo-text">Project Ideas</h1>
+
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Scanning Application.</li>
+                        <li>Security for IOT devices.</li>
+                        <li>Scanning Application for IOT vulnerabilities.</li>
+                    </ul>
+                </section>
+
+            </section>
+
+
+            <section>
+
+                <h1 class="logo-text">Any Queries ?</h1>
+
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <div class="line top"></div>
+    <div class="line bottom"></div>
+    <div class="line left"></div>
+    <div class="line right"></div>
+
+    <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+    <script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+    <script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+
+    <script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+    <script>
+        const printPlugins = [
+            RevealNotes,
+            RevealHighlight,
+            RevealMath.MathJax3,
+            RevealAnimate,
+            RevealChalkboard,
+            RevealEmbedTweet,
+            RevealChart,
+        ];
+
+        const plugins = [...printPlugins,
+            RevealZoom,
+            RevealSearch,
+            RevealMarkdown,
+
+            RevealFullscreen,
+            RevealAnything,
+            //RevealAudioSlideshow,
+            //RevealAudioRecorder,
+
+            // poll
+            // question
+            // seminar
+            Verticator
+        ]
+
+
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
+        Reveal.initialize({
+            controls: true,
+            controlsTutorial: true,
+            controlsLayout: 'bottom-right',
+            controlsBackArrows: 'faded',
+            progress: true,
+            slideNumber: false,
+            //#showSlideNumber "all" "print" "speaker"
+            hash: true, //# hash: false,
+            //# respondToHashChanges: true,
+            //# history: false,
+            keyboard: true,
+            //#keyboardCondition: null,
+            overview: true,
+            center: true,
+            touch: true,
+            loop: false,
+            rtl: false,
+            //#navigationMode: 'default', linear grid
+            shuffle: false,
+            fragments: true,
+            fragmentInURL: false,
+            embedded: false,
+            help: true,
+            //#pause: true
+            showNotes: false,
+            autoPlayMedia: false, // TODO fix this to a nullable value
+            //#preloadIframes: null. true false
+            //#autoAnimate: true
+            //#autoAnimateMatcher: null,
+            //#autoAnimateEasing: 'ease',
+            //autoAnimateDuration: 1.0,
+            //#autoAnimateUnmatched: true
+            //#autoAnimateStyles: []
+            autoSlide: 0, // TODO fix this to a falseable value
+            autoSlideStoppable: true,
+            autoSlideMethod: '0',
+            defaultTiming: 120,
+            mouseWheel: true,
+            //#previewLinks: false
+            //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+            //#postMessageEvents: false,
+            //#focusBodyOnPageVisibilityChange: true,
+            transition: 'fade',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+            //#pdfSeparateFragments: true,
+            //#pdfPageHeightOffset: -1,
+            viewDistance: 3,
+            //#mobileViewDistance: 2,
+            display: 'block',
+            //#hideInactiveCursor: true,
+            //#hideCursorTime: 5000
+
+            // Parallax Background
+            parallaxBackgroundImage: '',
+            parallaxBackgroundSize: '',
+            parallaxBackgroundHorizontal: 0,
+            parallaxBackgroundVertical: 0,
+
+            //Presentation Size
+            width: 960,
+            height: 700,
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2,
+            disableLayout: false,
+
+            audio: {
+                prefix: 'audio/', // audio files are stored in the "audio" folder
+                suffix: '.ogg', // audio files have the ".ogg" ending
+                textToSpeechURL: null, // the URL to the text to speech converter
+                defaultNotes: false, // use slide notes as default for the text to speech converter
+                defaultText: false, // use slide text as default for the text to speech converter
+                advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+                autoplay: false, // automatically start slideshow
+                defaultDuration: 5, // default duration in seconds if no audio is available
+                defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+                playerOpacity: 0.05, // opacity value of audio player if unfocused
+                playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+                startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+            },
+
+            chalkboard: { // font-awesome.min.css must be available
+                //src: "chalkboard/chalkboard.json",
+                storage: "chalkboard-demo",
+            },
+
+            customcontrols: {
+                controls: [
+                    {
+                        id: 'toggle-overview',
+                        title: 'Toggle overview (O)',
+                        icon: '<i class="fa fa-th"></i>',
+                        action: 'Reveal.toggleOverview();'
+                    }
+                    ,
+                    {
+                        icon: '<i class="fa fa-pen-square"></i>',
+                        title: 'Toggle chalkboard (B)',
+                        action: 'RevealChalkboard.toggleChalkboard();'
+                    },
+                    {
+                        icon: '<i class="fa fa-pen"></i>',
+                        title: 'Toggle notes canvas (C)',
+                        action: 'RevealChalkboard.toggleNotesCanvas();'
+                    }
+
+                ]
+            },
+            chart: {
+                defaults: {
+                    color: 'lightgray', // color of labels
+                    scale: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 },
+                        grid: { color: "lightgray" }, // color of grid lines
+                    },
+                },
+                line: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"], "borderDash": [[5, 10], [0, 0]] },
+                bar: { backgroundColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+                pie: { backgroundColor: [["rgba(0,0,0,.8)", "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"]] },
+                radar: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+            },
+            math: {
+                mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                config: 'TeX-AMS_HTML-full',
+                // pass other options into `MathJax.Hub.Config()`
+                TeX: { Macros: { RR: "{\\bf R}" } }
+            },
+            anything: [
+                {
+                    className: "plot",
+                    defaults: { width: 500, height: 500, grid: true },
+                    initialize: (function (container, options) { options.target = "#" + container.id; functionPlot(options) })
+                },
+                {
+                    className: "chart",
+                    initialize: (function (container, options) { container.chart = new Chart(container.getContext("2d"), options); })
+                },
+                {
+                    className: "anything",
+                    initialize: (function (container, options) { if (options && options.initialize) { options.initialize(container) } })
+                },
+            ],
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins)
+        });
+
+
+        // Change chalkboard theme : 
+        function changeTheme(input) {
+            var config = {};
+            config.theme = input.value;
+            Reveal.getPlugin("RevealChalkboard").configure(config);
+            input.blur();
+        }
+
+
+        if (window.location.search.match(/print-pdf-now/gi)) {
+            setTimeout(() => {
+                window.print();
+            }, 2500);
+
+        }
+    </script>
+
+</body>
+
+</html>
